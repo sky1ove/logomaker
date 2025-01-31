@@ -4,9 +4,9 @@ def readme():
     with open('README.md') as f:
         return f.read()
 
-setup(name='logomaker',
+setup(name='logomaker-kinase',
       version='0.8.3',
-      description='Package for making Sequence Logos',
+      description='Modified Logomaker package for making kinase substrate motif',
       long_description=readme(),
       long_description_content_type='text/markdown',
       classifiers=[
@@ -17,8 +17,8 @@ setup(name='logomaker',
       ],
       keywords='Sequence Logos',
       url='http://logomaker.readthedocs.io',
-      author='Ammar Tareen and Justin B. Kinney',
-      author_email='tareen@cshl.edu',
+      author='Lily',
+      author_email='lcai888666@gmail.com',
       license='MIT',
       packages=['logomaker'],
       include_package_data=True,
