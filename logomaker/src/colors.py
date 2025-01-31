@@ -42,6 +42,20 @@ COLOR_SCHEME_DICT = {
         'GC': [0, 0, 1]
     },
 
+    # Use the color scheme from Johnson et al., Nature 2023 
+    # https://www.nature.com/articles/s41586-022-05575-3
+    'kinase_protein': {
+        'AG': '#037f04',
+        'DEsty': '#da143e',
+        'F': '#84380b',
+        'HQN': '#8d2be1',
+        'LMIFWTVC': '#d9a41c',
+        'P': '#000000',
+        'RK': '#0000ff',
+        'ST': '#8d008d',
+        'Y': '#84380b',
+        },
+
     # Suggested by Ryan Z. Friedman
     # https://twitter.com/rfriedman22/status/1085722502649786368
     'colorblind_safe': {
@@ -267,9 +281,9 @@ def get_color_dict(color_scheme, chars):
     # Check that all entries in chars are strings of length 1
     for i, c in enumerate(chars):
         c = str(c) # convert from unicode to string to work with python 2
-        check(isinstance(c, str) and len(c)==1,
-              'entry number %d in chars is %s; ' % (i, repr(c)) +
-              'must instead be a single character')
+        # check(isinstance(c, str) and len(c)==1,
+        #       'entry number %d in chars is %s; ' % (i, repr(c)) +
+        #       'must instead be a single character')
 
     # if color_scheme is None, choose default based on chars
     if color_scheme is None:
@@ -345,11 +359,11 @@ def get_color_dict(color_scheme, chars):
     if not set(chars) <= set(color_dict.keys()):
         for c in chars:
             if not c in color_dict:
-                check(False,
-                      " Warning: Character '%s' is not in color_dict. " % c +
-                      "Using black.",
-                      warn=True)
-                color_dict[c] = to_rgb('black')
+                # check(False,
+                #       " Warning: Character '%s' is not in color_dict. " % c +
+                #       "Using black.",
+                #       warn=True)
+                color_dict[c] = to_rgb("#da143e")
     return color_dict
 
 

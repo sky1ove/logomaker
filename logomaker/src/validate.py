@@ -65,9 +65,9 @@ def validate_matrix(df, matrix_type=None, allow_nan=False):
         col = str(col)
         check(isinstance(col, str),
               'column number %d is of type %s; must be a str' % (i, col))
-        check(len(col) == 1,
-              'column %d is %s and has length %d; ' % (i, repr(col), len(col))
-              + 'must have length 1.')
+        # check(len(col) == 1,
+        #       'column %d is %s and has length %d; ' % (i, repr(col), len(col))
+        #       + 'must have length 1.')
 
     # 2025.01.19 Fix for Issue #36 - Columns should *not* be sorted alphabetically
     # as this nullifies the 'fixed_order' option in Logo()

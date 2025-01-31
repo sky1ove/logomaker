@@ -517,8 +517,8 @@ class Logo:
               'type(c) = %s must be of type str' % type(c))
 
         # validate that c has length 1
-        check(len(c) == 1,
-              'c = %s; must have length 1.' % repr(c))
+        # check(len(c) == 1,
+        #       'c = %s; must have length 1.' % repr(c))
 
         # check c is a valid character
         check(c in self.glyph_df.columns,
