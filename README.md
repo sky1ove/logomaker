@@ -1,9 +1,5 @@
 # logomaker 
 
-[![Downloads](https://pepy.tech/badge/logomaker)](https://pepy.tech/project/logomaker)
-[![PyPI version](https://badge.fury.io/py/logomaker.svg)](https://badge.fury.io/py/logomaker)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jbkinney/logomaker/master?filepath=logomaker%2Ftutorials)
-
 This repository is modified from the Logomaker to generate kinase substrate motif. It allowed multiple characters (pS) instead of single letter for each position in the logo.
 
 ## Installation
